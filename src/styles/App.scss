@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import "./variables";
+@import "./animations";
+
+.App {
+    font-family: "PT Sans", sans-serif;
+}
+// HOME PAGE
+.home-tab {
+    font-weight: bold;
+    height: 100vh;
+    background-color: #ecf0f6;
+    .home-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: $primary-color;
+
+        .title-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
+            .title-image {
+                height: 125px;
+                width: 400px;
+            }
+        }
+
+        $logo-width: 500px;
+        $logo-height: 500px;
+        .image-container {
+            justify-self: center;
+            align-self: center;
+            height: $logo-height;
+            width: $logo-width;
+
+            .img1 {
+                position: absolute;
+                width: $logo-width;
+                height: $logo-height;
+            }
+            .img2 {
+                position: absolute;
+                width: $logo-width;
+                height: $logo-height;
+            }
+            .img3 {
+                position: absolute;
+                width: $logo-width;
+                height: $logo-height;
+            }
+        }
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin-top: 100px;
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 400px;
+                a {
+                    padding: 10px 25px 10px 25px;
+                    border: 1px solid;
+                    border-radius: 2px;
+                    border-color: $orange;
+                    color: $orange;
+                    font-size: 25px;
+                    text-decoration: none;
+                    letter-spacing: 3px;
+                    transition: 0.3s ease-out 100ms;
+                }
+                a:hover {
+                    font-size: 27px;
+                    color: #fd5a1f;
+                }
+            }
+        }
+    }
+}
+
+//LOGIN PAGE
+//Fix height for login form components
+.login {
+    font-family: "PT Sans", sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $primary-color;
+    .login-form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-light-color;
+        min-height: 500px;
+        min-width: 450px;
+        height: 600px;
+        width: 520px;
+        border-radius: 5px;
+        box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.24);
+        .top-panel {
+            position: relative;
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+
+            height: 90%;
+
+            $logo-width: 175px;
+            $logo-height: 175px;
+            .image-container {
+                justify-self: center;
+                align-self: center;
+                height: $logo-height;
+                width: $logo-width;
+
+                .img1 {
+                    position: absolute;
+                    width: $logo-width;
+                    height: $logo-height;
+                }
+                .img2 {
+                    position: absolute;
+                    width: $logo-width;
+                    height: $logo-height;
+                }
+                .img3 {
+                    position: absolute;
+                    width: $logo-width;
+                    height: $logo-height;
+                }
+            }
+        }
+
+        .bottom-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10px;
+            height: 80%;
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                input {
+                    align-self: center;
+                    width: 50%;
+                    margin: 10px;
+                    padding: 10px;
+                    background: none;
+                    border: 1px solid;
+                    border-radius: 2px;
+                    border-color: $orange;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                }
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    button {
+                        align-self: center;
+                        font-size: 15px;
+                        margin: 5px;
+                        padding: 5px;
+                        width: 26.5%;
+                        border: none;
+                        text-decoration: none;
+                        letter-spacing: 3px;
+                        background-color: $primary-color;
+                        border: 1px solid;
+                        border-radius: 2px;
+                        border-color: $orange;
+                        color: $orange;
+                        transition: 0.3s ease-out 100ms;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        color: #fd5a1f;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main App
+.dashboard-app {
+    font-family: "PT Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $primary-light-color;
+    .header {
+        box-sizing: border-box;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        padding-left: 45px;
+        padding-right: 45px;
+        background-color: $primary-color;
+        .header-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left-control {
+                display: flex;
+                align-items: center;
+                .img1 {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+
+            .right-control {
+                display: flex;
+                align-items: center;
+                .img1 {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+
+            .img1:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .main {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        .left-menu {
+            position: fixed;
+            width: 305px;
+            left: -425px;
+            background-color: $primary-color;
+            height: calc(100vh - 44px);
+            transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .menu-open {
+            left: 0;
+        }
+
+        .main-content {
+            transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .main-shift {
+            margin-left: 305px;
+        }
+    }
+}
+
+.TaskList-area {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    .Task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding-left: 60px;
+        padding-right: 60px;
+        .button-group {
+            button {
+                align-self: center;
+                font-size: 15px;
+                margin: 5px;
+                padding: 5px;
+                border: none;
+                text-decoration: none;
+                letter-spacing: 3px;
+                background-color: $primary-color;
+                border: 1px solid;
+                border-radius: 2px;
+                border-color: $secondary-color;
+                color: $secondary-color;
+                transition: 0.3s ease-out 100ms;
+            }
+            button:hover {
+                cursor: pointer;
+                color: #fd5a1f;
+            }
+        }
+        .date {
+            color: $secondary-color;
+        }
+    }
+}
+
+// Popver
+.popover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.247);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+        .newTask {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            background-color: $primary-color;
+            border-radius: 15px;
+            box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.24);
+            height: 450px;
+            width: 400px;
+            padding: 10px;
+            form {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                input {
+                    align-self: center;
+                    width: 80%;
+                    margin: 10px;
+                    padding: 10px;
+                    background: none;
+                    border: 1px solid;
+                    border-radius: 2px;
+                    border-color: $orange;
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                }
+                .title-container {
+                    border-bottom: black;
+                }
+
+                .field-container {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 40px;
+                    button {
+                        align-self: center;
+                        font-size: 15px;
+                        margin: 5px;
+                        padding: 5px;
+                        width: 26.5%;
+                        border: none;
+                        text-decoration: none;
+                        letter-spacing: 3px;
+                        background-color: $primary-color;
+                        border: 1px solid;
+                        border-radius: 2px;
+                        border-color: $orange;
+                        color: $orange;
+                        transition: 0.3s ease-out 100ms;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        color: #fd5a1f;
+                    }
+                }
+            }
+            
+        }
+        .newProject {
+            position: relative;
+            z-index: 10;
+            background-color: black;
+            height: 700px;
+            width: 700px;
+        }
+
+}
